@@ -60,31 +60,34 @@ const calculate = () => {
 
 	newCalc.setNum1(number1);
 	newCalc.setNum2(number2);
+	let resultNum;
 
 	switch (calcOperator) {
 		case '+':
-			console.log(newCalc.addition());
+			resultNum = newCalc.addition();
 			break;
 		case '-':
-			console.log(newCalc.difference());
+			resultNum = newCalc.difference();
 			break;
 		case '*':
-			console.log(newCalc.product());
+			resultNum = newCalc.product();
 			break;
 		case '/':
-			console.log(newCalc.division());
+			resultNum = newCalc.division();
 			break;
 		case '%':
-			console.log(newCalc.remainder());
+			resultNum = newCalc.remainder();
 			break;
 		case '**':
-			console.log(newCalc.power());
+			resultNum = newCalc.power();
 			break;
 	}
+
+	statement.textContent = `${number1}${calcOperator}${number2}=${resultNum}`;
 };
 
-num1.addEventListener('keydown', calculate);
-num2.addEventListener('keydown', calculate);
+num1.addEventListener('change', calculate);
+num2.addEventListener('change', calculate);
 operator.addEventListener('change', calculate);
 
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-dars</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ 
+  <div class="container pt-2 flex-column w-50 justify-content-center font-weight-bold">
+    <div class="calc py-2 text-center text-white bg-primary rounded mb-2">
+      Calculator
+    </div>
+    <div class="calc-display d-flex align-items-end justify-content-end display-4 text-right rounded border font-weight-light" id="displayResult">
+      15x65
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <input class="form-control" id="num1" type="number" aria-label="Enter number">
+      </div>
+
+      <div class="col-md-4">
+        <select class="form-control" name="operator" id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+          <option value="**">^</option>
+        </select>
+      </div>
+      
+      <div class="col-md-4">
+        <input class="form-control" id="num2" type="number" aria-label="Enter number">
+      </div>
+    </div>
+  </div><!-- End of container -->
+  
+
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

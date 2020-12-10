@@ -82,8 +82,12 @@ const calculate = () => {
 			resultNum = newCalc.power();
 			break;
 	}
-
-	statement.textContent = `${number1}${calcOperator}${number2}=${resultNum}`;
+	if(Boolean(number1) && Boolean(number2) && Boolean(calcOperator)){
+		if(number2 < 0) {
+			number2 = `(${number2})`;
+		}
+		statement.textContent = `${number1}${calcOperator}${number2}=${resultNum}`;
+	}
 };
 
 num1.addEventListener('change', calculate);
